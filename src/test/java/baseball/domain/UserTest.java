@@ -15,12 +15,9 @@ class UserTest {
         User user = new User();
 
         assertTrue(user.inputValidation("123"));
-        assertTrue(user.inputValidation("456"));
-        assertTrue(user.inputValidation("789"));
 
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("12"));
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("1234"));
-        assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("12345"));
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("aa"));
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("@@"));
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("   "));
