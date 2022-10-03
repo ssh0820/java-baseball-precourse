@@ -46,7 +46,5 @@ public class BaseGameController {
         if(number.equals(GameMessage.END)){
             System.out.println(GameMessage.GAME_END);
         }
-
     }
-
 }
