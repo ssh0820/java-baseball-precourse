@@ -37,4 +37,11 @@ class UserTest {
         assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("@@"));
     }
 
+    @Test
+    @DisplayName("사용자가 공백입력 했을때")
+    void inputlength (){
+        User user = new User();
+        assertThatIllegalArgumentException().isThrownBy(()-> user.inputValidation("  "));
+    }
+
 }
