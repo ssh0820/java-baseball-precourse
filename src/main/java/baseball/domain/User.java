@@ -29,10 +29,11 @@ public class User {
     }
 
 
-    private void inputValidation(String inputNumbers){
+    public boolean inputValidation(String inputNumbers){
         isEmpty(inputNumbers);
         inputLength(inputNumbers);
         inputRegex(inputNumbers);
+        return true;
     }
 
     /** 입력값 숫자 체크*/
